@@ -1,0 +1,32 @@
+//Destructuring-- easily extract array element or object properties and store them in a variable
+//Array Destructuring
+const numbers=[1,2,3];
+[num1, ,num3]=numbers;
+console.log(num1, num3);
+
+//Object Destructuring
+ const name={name:'Yashi', age:'22'}
+console.log(name.age);
+
+//rference type
+
+const person ={
+    name:'Shubh'
+};
+
+const secondPerson = person;
+ person.name='Shubham';
+console.log(secondPerson); // result will be name in the second person will also be changed to shubham
+
+//but if we want the original copy of person in the secondPerson and it does not changes even if the name in the person is changed the we use spread
+ 
+const human={
+    name:'Yashi'
+};
+const secondHuman={
+    ...human
+};
+
+human.name='Yashasvi';
+
+console.log(secondHuman);
